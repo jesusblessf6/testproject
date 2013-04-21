@@ -1,12 +1,8 @@
 Testproject::Application.routes.draw do
   #get "static_pages/about"
-  match 'about' => 'static_pages#about'
-
-  get "static_pages/home"
-
-  get "static_pages/help"
-  match 'help' => 'static_pages#help'
-
+  match '/about', to: 'static_pages#about'
+  match '/help',  to: 'static_pages#help'
+  match '/home', to: 'static_pages#home'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -57,7 +53,7 @@ Testproject::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'static_pages#home'
+  root to: 'static_pages#home'
 
   # See how all your routes lay out with "rake routes"
 
