@@ -1,4 +1,7 @@
 Testproject::Application.routes.draw do
+  resources :products
+
+
   #get "static_pages/about"
   match '/about', to: 'static_pages#about'
   match '/help',  to: 'static_pages#help'
