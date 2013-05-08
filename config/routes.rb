@@ -1,4 +1,6 @@
 Testproject::Application.routes.draw do
+  resources :banks
+
   resources :products
 
 
